@@ -22,15 +22,10 @@
     "concurrently": "^4.1.0",
     "cors": "^2.8.5",
     "express": "^4.16.3",
-    "jest": "^24.8.0",
     "mongodb": "^3.2.4",
     "nodemon": "^1.19.0"
   },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
-  },
+  
   "devDependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
