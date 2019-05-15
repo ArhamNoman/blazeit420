@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Redirect, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Login from './Components/Login'
 import AdminDashboard from './Components/Admin/AdminPanel'
 import FacultyDashboard from './Components/Faculty/FacultyPanel'
@@ -25,16 +25,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Switch>
-          <Route exact path="/" component={Login}/>
-          <ProtectedRoute path="/admin" component={AdminDashboard}/>
-          <ProtectedRoute path="/faculty" component={FacultyDashboard}/>
-          <Route path = "*" component={NotFound} />
-        </Switch>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Login}/>
+            <ProtectedRoute path="/admin" component={AdminDashboard}/>
+            <ProtectedRoute path="/faculty" component={FacultyDashboard}/>
+            <Route path = "*" component={NotFound} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
 }
 
 export default App
-export {App} ; 
+export {App} 
