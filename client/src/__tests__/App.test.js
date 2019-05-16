@@ -6,7 +6,7 @@ import toJson from 'enzyme-to-json';
 const component = shallow(<App />);
 
 describe('Login Component', () => {
-    it('renders without crashing given the required props', () => {
+    it('renders without crashing ', () => {
         const props = {}
         const wrapper = shallow(<App {...props} />)
         expect(toJson(wrapper)).toMatchSnapshot()

@@ -69,3 +69,4 @@ class FacultyPanel extends Component {
 }
 
 export default FacultyPanel;
+export {FacultyPanel}

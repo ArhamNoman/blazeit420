@@ -6,7 +6,7 @@ import toJson from 'enzyme-to-json';
 const component = shallow(<AdminDashboard />);
 
 describe('Admin Dashboard Component', () => {
-    it('Login renders properly', () => {
+    it('Admin Dashboard renders successfully', () => {
         // const wrapper = shallow(<AdminDashboard />)
         expect(toJson(component)).toMatchSnapshot()
     }) ; 
@@ -19,5 +19,4 @@ describe('Admin Dashboard Component', () => {
         const wrapper = component.find('p')
         expect(wrapper.length).toBe(1)
     }); 
-
 });
