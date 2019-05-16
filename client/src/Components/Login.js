@@ -131,9 +131,10 @@ class Login extends Component {
             onSubmit={(e)=>this.sendToServer(this.state,e,(resp,profile) => this.handleSubmit(resp,profile))}
             >
 
-              <Form.Group as={Col}>
+              <Form.Group className="UserForm" as={Col}>
                 {/* <Form.Label>User</Form.Label> */}
-                <Form.Control 
+                <Form.Control
+                className = "UserFormCtrl" 
                 name="user"
                 onChange={this.handleUser}
                  as="select">
@@ -143,7 +144,7 @@ class Login extends Component {
                 </Form.Control>
               </Form.Group>
 
-             <Form.Group as={Col}>
+             <Form.Group className="PwdForm" as={Col}>
                {/* <Form.Label>email:</Form.Label> */}
                <Form.Control
                 required
@@ -181,3 +182,4 @@ class Login extends Component {
 }
 
 export default Login;
+export {Login}

@@ -12,7 +12,7 @@ describe('Login Component', () => {
         expect(toJson(wrapper)).toMatchSnapshot()
     })
     
-    it('Login provides two login options', () => {
+    it('Login provides login options for admin and faculty', () => {
         const wrapper = component.find('ProtectedRoute');
         expect(wrapper.length).toBe(2);
         // console.log(component.debug())
